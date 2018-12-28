@@ -1,10 +1,11 @@
 module LazyNavigator
   class Opener
-    class << self
-      STANDART_MSG = 'echo let the rspec to be with you'.freeze
-      WEATHER = 'curl https://wttr.in?0'.freeze
-      ACCEPT = 'y'.freeze
 
+    STANDART_MSG = 'echo let the rspec to be with you'.freeze
+    WEATHER = 'curl https://wttr.in?0'.freeze
+    ACCEPT = 'y'.freeze
+
+    class << self
       def lead(path:, ide: nil, command: STANDART_MSG)
         ask_question
         return unless yes?
