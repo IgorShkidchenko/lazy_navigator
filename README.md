@@ -7,16 +7,23 @@
 
 ##### create scripts files by runnig this commands in your terminal:
 ```~$ cd ~```
+
 ```~$ irb```
+
 ```> require 'lazy_navigator'```
+
 ```> LazyNavigator::Generator.g```
+
  ```> exit ```
+ 
 ##### then edit constants in generated lazy_navigator/last_project.rb file
 PATH_TO_LAST_PROJECT = 'your last project path'
+
 IDE = your ide name in bash
 ## Usage
 
 in your home folder run
+
 ```~$ ./l```
 ##### also you can pass argument command: in lead method which execute bash command in opening terminal
 for example: .lead(path: PATH_TO_LAST_PROJECT, command: 'echo hello world')
