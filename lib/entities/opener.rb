@@ -1,6 +1,5 @@
 module LazyNavigator
   class Opener
-
     STANDART_MSG = 'echo let the rspec to be with you'.freeze
     WEATHER = 'curl https://wttr.in?0'.freeze
     ACCEPT = 'y'.freeze
