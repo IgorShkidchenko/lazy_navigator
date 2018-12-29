@@ -7,7 +7,7 @@ module LazyNavigator
     RUBY_SCRIPT_NAME = 'last_project.rb'.freeze
     TEXT_FOR_BASH = "#!/bin/bash\nruby lazy_navigator/last_project.rb\nkill -9 $PPID".freeze
     TEXT_FOR_RUBY = "require 'lazy_navigator'\n\nPATH_TO_LAST_PROJECT = 'RubyGarage/codebreaker <-- change me'
-                    \n#IDE = your IDE name for bash, for example VSC = code
+                    \n#IDE = your ide name in bash, for example VSC = code
                     \nLazyNavigator::Opener.lead(path: PATH_TO_LAST_PROJECT, ide: nil)".freeze
 
     class << self

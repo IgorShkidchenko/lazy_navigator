@@ -4,7 +4,7 @@ module LazyNavigator
     let(:path2) { 'l' }
     let(:generator) { Generator }
 
-    describe 'when #generate_script should receive two puts' do
+    describe 'when .generate_script should receive two puts' do
       it do
         allow(generator).to receive(:generate_bash) { true }
         allow(generator).to receive(:generate_ruby) { true }
@@ -13,7 +13,7 @@ module LazyNavigator
       end
     end
 
-    describe 'when #generate_script should create files' do
+    describe 'when .generate_script should create files' do
       before do
         allow(generator).to receive(:add_script_command)
       end

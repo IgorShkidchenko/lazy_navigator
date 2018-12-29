@@ -1,39 +1,24 @@
+[![CircleCI](https://circleci.com/gh/IgorShkidchenko/lazy_navigator/tree/master.svg?style=svg)](https://circleci.com/gh/IgorShkidchenko/lazy_navigator/tree/master) [![Maintainability](https://api.codeclimate.com/v1/badges/25e47f7e18c7de8dffbb/maintainability)](https://codeclimate.com/github/IgorShkidchenko/lazy_navigator/maintainability)
 # LazyNavigator
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/lazy_navigator`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+###### Gem that generates bash script which opens terminal and your IDE in last project folder(which you point out in constant), and if you want executes some additional bash commands
 
 ## Installation
+``` $ gem install lazy_navigator ```
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'lazy_navigator'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install lazy_navigator
-
+##### create scripts files by runnig this commands in your terminal:
+```~$ cd ~```
+```~$ irb```
+```> require 'lazy_navigator'```
+```> LazyNavigator::Generator.g```
+ ```> exit ```
+##### then edit constants in generated lazy_navigator/last_project.rb file
+PATH_TO_LAST_PROJECT = 'your last project path'
+IDE = your ide name in bash
 ## Usage
 
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/lazy_navigator.
-
+in your home folder run
+```~$ ./l```
+##### also you can pass argument command: in lead method which execute bash command in opening terminal
+for example: .lead(path: PATH_TO_LAST_PROJECT, command: 'echo hello world')
 ## License
-
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
