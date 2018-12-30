@@ -34,6 +34,5 @@ for example:
 
 https://askubuntu.com/questions/228304/how-do-i-run-a-script-at-start-up
 
-##### if you want you can add this script to autostart when your OS
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
