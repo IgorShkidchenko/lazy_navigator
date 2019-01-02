@@ -1,8 +1,9 @@
 module LazyNavigator
   RSpec.describe Generator do
-    let(:path) { 'lazy_navigator/last_project.rb' }
-    let(:path2) { 'l' }
-    let(:generator) { Generator }
+    let(:bash_file_name) { 'l' }
+    let(:ruby_file_name) { 'last_project.rb' }
+    let(:ruby_files_path) { "lazy_navigator/#{ruby_file_name}" }
+    let(:generator) { described_class }
 
     describe 'when .generate_script should receive two puts' do
       it do
@@ -14,24 +15,23 @@ module LazyNavigator
     end
 
     describe 'when .generate_script should create files' do
-      before do
-        allow(generator).to receive(:add_script_command)
-      end
+
+      before { allow(generator).to receive(:add_script_command) }
 
       after do
-        File.delete(path)
-        File.delete(path2)
+        File.delete(ruby_files_path)
+        File.delete(bash_file_name)
         FileUtils.rm_rf('lazy_navigator')
       end
 
       it do
         generator.generate_script
-        expect(File.exist?(path)).to eq true
+        expect(File.exist?(ruby_files_path)).to eq true
       end
 
       it do
         generator.generate_script
-        expect(File.exist?(path2)).to eq true
+        expect(File.exist?(bash_file_name)).to eq true
       end
     end
   end
